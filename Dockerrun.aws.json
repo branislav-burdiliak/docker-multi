@@ -12,13 +12,6 @@
       "name": "nginx",
       "image": "branislavburdiliak/docker-multi-nginx",
       "essential": true,
-      "memory": 128
-    },
-    {
-      "name": "server",
-      "image": "branislavburdiliak/docker-multi-server",
-      "hostname": "api",
-      "essential": false,
       "portMappings": [
         {
           "hostPort": 80,
@@ -26,6 +19,13 @@
         }
       ],
       "links": ["client", "server"],
+      "memory": 128
+    },
+    {
+      "name": "server",
+      "image": "branislavburdiliak/docker-multi-server",
+      "hostname": "api",
+      "essential": false,
       "memory": 128
     },
     {
